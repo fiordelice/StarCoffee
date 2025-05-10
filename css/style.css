@@ -380,12 +380,12 @@ img {
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    margin: 10px auto;
   }
 
   nav {
@@ -398,4 +398,3 @@ img {
     display: flex;
   }
 }
-
