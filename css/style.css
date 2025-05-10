@@ -374,4 +374,28 @@ img {
     display: flex;
   }
 }
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin: 10px auto;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
 
