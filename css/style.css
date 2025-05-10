@@ -209,12 +209,23 @@ footer> div{
     gap: 10px;
   }
 
-  .img img {
-    width: 30px;
-    height: 30px;
-  }
+/* Correção geral para imagens */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* Garante que os cards e imagens em .flex se adaptem */
+.flex {
+  flex-wrap: wrap;
+}
+
+.flex > img,
+.card2 {
+  width: 100%;
+}
+
+/* Responsividade até tablets */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -233,9 +244,10 @@ footer> div{
   }
 
   .botoes-menu {
+    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
+    height: auto;
     padding: 10px 0;
   }
 
@@ -243,14 +255,10 @@ footer> div{
     flex-direction: column;
   }
 
-  .flex > img,
-  .card2 {
-    width: 100%;
-  }
-
   .card1,
   .card2,
   .card3 {
+    width: 100%;
     padding: 15px;
   }
 
@@ -276,6 +284,7 @@ footer> div{
   }
 }
 
+/* Responsividade para celulares pequenos */
 @media (max-width: 480px) {
   .botao-branco,
   .botao-preto,
@@ -299,5 +308,9 @@ footer> div{
   .img img {
     width: 25px;
     height: 25px;
+  }
+
+  nav ul.menu li {
+    padding: 5px;
   }
 }
